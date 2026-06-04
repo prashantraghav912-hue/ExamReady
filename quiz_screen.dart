@@ -24,7 +24,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   List<Map<String, dynamic>> reviewDataList = [];
 
-  // ================= QUESTIONS =================
+  //              QUESTIONS 
   final List<Map<String, Object>> questions = [
     {
       "question": "Flutter kis language par based hai?",
@@ -50,7 +50,7 @@ class _QuizScreenState extends State<QuizScreen> {
     startTimer();
   }
 
-  // ================= BOOKMARK =================
+  //           BOOKMARK
   void checkBookmark() async {
     final prefs = await SharedPreferences.getInstance();
     List<String> saved =
@@ -83,7 +83,7 @@ class _QuizScreenState extends State<QuizScreen> {
     checkBookmark();
   }
 
-  // ================= TIMER =================
+  //           TIMER
   void startTimer() {
     timeLeft = 30;
     timer?.cancel();
@@ -100,7 +100,7 @@ class _QuizScreenState extends State<QuizScreen> {
     });
   }
 
-  // ================= CHECK ANSWER =================
+  //       CHECK ANSWER
   void checkAnswer(String option) {
     if (answered) return;
 
@@ -127,7 +127,7 @@ class _QuizScreenState extends State<QuizScreen> {
     });
   }
 
-  // ================= NEXT QUESTION =================
+  //            NEXT QUESTION 
   void nextQuestion() {
     timer?.cancel();
 
@@ -148,14 +148,14 @@ class _QuizScreenState extends State<QuizScreen> {
             score: score,
             total: questions.length,
             reviewData: reviewDataList,
-            subject: widget.subject, // 👈 Important
+            subject: widget.subject, 
           ),
         ),
       );
     }
   }
 
-  // ================= UI =================
+  //                 UI
   @override
   Widget build(BuildContext context) {
     var currentQuestion = questions[currentIndex];
