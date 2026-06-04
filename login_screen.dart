@@ -26,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
       String email = emailController.text.trim();
 
-      // 🔥 ROLE CHECK
+      // ROLE CHECK
       if (email == "admin@gmail.com") {
         Navigator.pushReplacementNamed(context, '/admin');
       } else {
