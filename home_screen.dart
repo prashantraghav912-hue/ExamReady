@@ -10,7 +10,7 @@ import 'subject_selection_screen.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  // ✅ Save PDF function
+  // Save PDF function
   Future<void> saveDataAsPDF(BuildContext context) async {
     final pdf = pw.Document();
 
@@ -134,7 +134,7 @@ class HomeScreen extends StatelessWidget {
               "Save My Data",
               const Color(0xFFFFC107),
                   () {
-                saveDataAsPDF(context); // ✅ context available
+                saveDataAsPDF(context); //  context available
               },
             ),
 
