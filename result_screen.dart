@@ -7,14 +7,14 @@ class ResultScreen extends StatefulWidget {
   final int score;
   final int total;
   final List<Map<String, dynamic>> reviewData;
-  final String subject; // ✅ Added subject
+  final String subject; //  Added subject
 
   const ResultScreen({
     super.key,
     required this.score,
     required this.total,
     required this.reviewData,
-    required this.subject, // ✅ Required subject
+    required this.subject, //  Required subject
   });
 
   @override
