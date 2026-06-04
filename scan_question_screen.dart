@@ -46,7 +46,7 @@ class _ScanQuestionScreenState extends State<ScanQuestionScreen> {
       loading = true;
     });
 
-    const apiKey = "YOUR_OPENAI_API_KEY"; // 🔥 Replace this
+    const apiKey = "YOUR_OPENAI_API_KEY"; 
 
     final response = await http.post(
       Uri.parse("https://api.openai.com/v1/chat/completions"),
